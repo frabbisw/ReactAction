@@ -1,4 +1,4 @@
-name: Run Tests
+name: Run Lints
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
       - main # Run tests for pull requests targeting the main branch
 
 jobs:
-  test:
+  lints:
     runs-on: ubuntu-latest
 
     steps:
