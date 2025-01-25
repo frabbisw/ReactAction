@@ -1,13 +1,17 @@
-name: SonarQube
+name: Run SonarQube
+
 on:
   push:
     branches:
-      - master
+      - main 
   pull_request:
-    types: [opened, synchronize, reopened]
+    branches:
+      - main
+      
 jobs:
   sonarqube:
     name: SonarQube
+    
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
